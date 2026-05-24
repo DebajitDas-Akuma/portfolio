@@ -164,10 +164,10 @@ section{position:relative;z-index:2;padding:clamp(60px,10vh,120px) clamp(20px,8v
 .browser-dots span:nth-child(3){background:rgba(39,201,63,0.65);}
 .browser-url{flex:1;background:rgba(255,255,255,0.05);border-radius:4px;height:16px;margin:0 8px;display:flex;align-items:center;padding:0 8px;font-family:var(--font-mono);font-size:8px;color:rgba(168,85,247,0.5);letter-spacing:0.04em;white-space:nowrap;overflow:hidden;}
 .browser-url::before{content:'🔒 ';font-size:7px;margin-right:3px;opacity:0.5;}
-.browser-content{flex:1;display:flex;align-items:center;justify-content:center;transition:transform 0.5s cubic-bezier(0.23,1,0.32,1);position:relative;}
-.browser-content svg,.browser-content img{width:52px;height:52px;}
-.project-card:hover .browser-content{transform:scale(1.12);}
-.browser-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 20%,rgba(9,9,15,0.85) 100%);}
+.browser-content{flex:1;overflow:hidden;transition:transform 0.5s cubic-bezier(0.23,1,0.32,1);position:relative;}
+.browser-content .thumb-img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform 0.5s cubic-bezier(0.23,1,0.32,1),filter 0.3s;}
+.project-card:hover .browser-content .thumb-img{transform:scale(1.06);filter:brightness(1.08);}
+.browser-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(9,9,15,0.9) 100%);}
 .project-body{padding:22px;}
 .project-title{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px;letter-spacing:-0.01em;}
 .project-desc{font-size:13px;color:var(--text-muted);line-height:1.65;margin-bottom:16px;font-weight:300;}
@@ -501,69 +501,84 @@ footer{position:relative;z-index:2;padding:40px clamp(20px,8vw,120px);border-top
   </div>
   <div class="projects-grid">
 
+    <!-- PROJECT 1: Smart Waste Segregation -->
     <div class="project-card reveal">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#1a0829,#050a20);">
-        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">kyron-esports.pages.dev</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24"><use href="#ico-esports"/></svg><div class="browser-overlay"></div></div>
+      <div class="project-thumb">
+        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">github.com/DebajitDas-Akuma/Smart-Waste-Segregation-System</div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/waste-segregation.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/0d0a1a/a855f7?text=Smart+Waste+Segregation&font=syne" alt="Smart Waste Segregation System">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
-        <div class="project-title">Smart Waste Segregation System</div>
-        <div class="project-desc">An Arduino-based smart waste segregation system that automatically identifies and sorts waste into Metal, Plastic, and Organic/Wet categories using multiple sensors and servo-controlled mechanisms.</div>
+        <div class="project-title">Smart Waste Segregation</div>
+        <div class="project-desc">Arduino-based system that automatically identifies and sorts waste into Metal, Plastic, and Organic categories using multiple sensors and servo-controlled mechanisms.</div>
         <div class="project-stack">
           <span class="stack-tag"><svg viewBox="0 0 24 24"><use href="#ico-arduino"/></svg>Arduino</span>
           <span class="stack-tag"><svg viewBox="0 0 24 24"><use href="#ico-cpp"/></svg>C++</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/DebajitDas-Akuma/Smart-Waste-Segregation-System" target="_blank" class="project-btn solid"><svg width="12" height="12"><use href="#ico-github"/></svg>GitHub</a>
-          <a href="#" target="_blank" class="project-btn link-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live</a>
         </div>
       </div>
     </div>
 
-    <div class="project-card reveal">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#1a0829,#050a20);">
-        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">kyron-esports.pages.dev</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24"><use href="#ico-esports"/></svg><div class="browser-overlay"></div></div>
+    <!-- PROJECT 2: Green Pulse -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-thumb">
+        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">github.com/DebajitDas-Akuma/Green-Pulse-</div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/green-pulse.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/0a1a0a/22c55e?text=Green+Pulse+IoT&font=syne" alt="Green Pulse">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
         <div class="project-title">Green Pulse</div>
-        <div class="project-desc">Green Pulse is an IoT-based agriculture project designed to monitor plant health using multiple sensors and provide intelligent responses based on environmental conditions.
-
-The system collects real-time data such as soil moisture, temperature, humidity, light intensity, soil pH, and plant color changes to analyze the condition of plants and help improve agricultural efficiency.</div>
+        <div class="project-desc">IoT-based agriculture project monitoring plant health using soil moisture, temperature, humidity, light intensity, soil pH, and plant colour sensors.</div>
         <div class="project-stack">
           <span class="stack-tag"><svg viewBox="0 0 24 24"><use href="#ico-arduino"/></svg>Arduino</span>
           <span class="stack-tag"><svg viewBox="0 0 24 24"><use href="#ico-cpp"/></svg>C++</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/DebajitDas-Akuma/Green-Pulse-" target="_blank" class="project-btn solid"><svg width="12" height="12"><use href="#ico-github"/></svg>GitHub</a>
-          <a href="#" target="_blank" class="project-btn link-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live</a>
         </div>
       </div>
     </div>
 
-    <div class="project-card reveal">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#1a0829,#050a20);">
-        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">kyron-esports.pages.dev</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24"><use href="#ico-esports"/></svg><div class="browser-overlay"></div></div>
+    <!-- PROJECT 3: Auto Farming Machine -->
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-thumb">
+        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">github.com/DebajitDas-Akuma/RBVP-Auto-Farming-Machine</div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/auto-farming.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/0a1a10/60a5fa?text=RBVP+Auto+Farming+Machine&font=syne" alt="Auto Farming Machine">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
-        <div class="project-title">Auto-Farming-Machine</div>
-        <div class="project-desc">RBVP Auto Farming Machine is a smart agriculture project designed to monitor plant health and automate farming-related tasks using sensors, actuators, and a web-based dashboard.</div>
+        <div class="project-title">Auto-Farming Machine</div>
+        <div class="project-desc">Smart agriculture project that monitors plant health and automates farming tasks using sensors, actuators, and a web-based dashboard.</div>
         <div class="project-stack">
           <span class="stack-tag"><svg viewBox="0 0 24 24"><use href="#ico-arduino"/></svg>Arduino</span>
           <span class="stack-tag"><svg viewBox="0 0 24 24"><use href="#ico-cpp"/></svg>C++</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/DebajitDas-Akuma/RBVP-Auto-Farming-Machine" target="_blank" class="project-btn solid"><svg width="12" height="12"><use href="#ico-github"/></svg>GitHub</a>
-          <a href="#" target="_blank" class="project-btn link-btn"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Live</a>
         </div>
       </div>
     </div>
 
+    <!-- PROJECT 4: KYRON Esports -->
     <div class="project-card reveal">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#1a0829,#050a20);">
+      <div class="project-thumb">
         <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">kyron-esports.pages.dev</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24"><use href="#ico-esports"/></svg><div class="browser-overlay"></div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/kyron.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/1a0829/a855f7?text=KYRON+Esports&font=syne" alt="KYRON Esports">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
         <div class="project-title">KYRON Esports</div>
@@ -581,10 +596,15 @@ The system collects real-time data such as soil moisture, temperature, humidity,
       </div>
     </div>
 
+    <!-- PROJECT 5: Alpha Fitness V2 -->
     <div class="project-card reveal reveal-delay-1">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#200a0a,#0a1535);">
-        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">debajitdas-akuma.github.io/alpha-fitness-v2</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><div class="browser-overlay"></div></div>
+      <div class="project-thumb">
+        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">alpha-fitness-v2.debajit-das-musk.workers.dev</div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/alpha-fitness.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/200a0a/ef4444?text=Alpha+Fitness+V2&font=syne" alt="Alpha Fitness V2">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
         <div class="project-title">Alpha Fitness V2</div>
@@ -601,10 +621,15 @@ The system collects real-time data such as soil moisture, temperature, humidity,
       </div>
     </div>
 
+    <!-- PROJECT 6: ProZone Gym -->
     <div class="project-card reveal reveal-delay-2">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#0d1a10,#1a0d28);">
-        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">debajitdas-akuma.github.io/ProZoneGym</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg><div class="browser-overlay"></div></div>
+      <div class="project-thumb">
+        <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">prozone-gym.debajit-das-musk.workers.dev</div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/prozone.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/0d1a10/22c55e?text=ProZone+Gym&font=syne" alt="ProZone Gym">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
         <div class="project-title">ProZone Gym</div>
@@ -621,10 +646,15 @@ The system collects real-time data such as soil moisture, temperature, humidity,
       </div>
     </div>
 
+    <!-- PROJECT 7: Scholar Tripura -->
     <div class="project-card reveal">
-      <div class="project-thumb" style="background:linear-gradient(160deg,#0a1520,#180a28);">
+      <div class="project-thumb">
         <div class="browser-bar"><div class="browser-dots"><span></span><span></span><span></span></div><div class="browser-url">scholar-tripura.debajit-das-musk.workers.dev</div></div>
-        <div class="browser-content"><svg width="52" height="52" viewBox="0 0 24 24"><use href="#ico-book"/></svg><div class="browser-overlay"></div></div>
+        <div class="browser-content">
+          <!-- REPLACE SRC WITH YOUR OWN SCREENSHOT: e.g. src="images/scholar-tripura.png" -->
+          <img class="thumb-img" src="https://placehold.co/680x140/0a1520/60a5fa?text=Scholar+Tripura&font=syne" alt="Scholar Tripura">
+          <div class="browser-overlay"></div>
+        </div>
       </div>
       <div class="project-body">
         <div class="project-title">Scholar Tripura</div>
